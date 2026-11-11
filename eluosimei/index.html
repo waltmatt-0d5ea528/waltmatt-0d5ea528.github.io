@@ -1,0 +1,1258 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>俄罗斯美女 - 人物风采与生活文化</title>
+  <meta name="description" content="俄罗斯美女主题聚合页，汇集模特、演员、运动员、歌手等人物档案与街拍风格、文化观察。提供人物资料、时尚穿搭、生活动态与深度解读，适合关注俄罗斯女性风采的读者浏览。">
+  <meta name="keywords" content="俄罗斯美女">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23b03a48'/%3E%3Ctext x='32' y='42' font-size='32' text-anchor='middle' fill='%23fff' font-family='serif'%3E俄%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --primary: #b03a48;
+      --primary-light: #e8c9cc;
+      --primary-dark: #7a2530;
+      --bg: #fdf8f6;
+      --surface: #ffffff;
+      --text-1: #1e1a1a;
+      --text-2: #5e5454;
+      --text-3: #8d8080;
+      --border: #e6ddd9;
+      --radius-card: 12px;
+      --radius-btn: 8px;
+      --radius-tag: 6px;
+      --shadow-default: 0 2px 8px rgba(0,0,0,0.04);
+      --shadow-hover: 0 8px 20px rgba(0,0,0,0.08);
+      --font-main: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+      --max-width: 1360px;
+      --announce-height: 36px;
+      --header-height: 60px;
+      --sticky-offset: calc(var(--announce-height) + var(--header-height));
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: var(--sticky-offset); }
+
+    body {
+      font-family: var(--font-main);
+      background: var(--bg);
+      color: var(--text-1);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button { font: inherit; cursor: pointer; border: none; background: none; }
+
+    /* 吸顶公告条 */
+    .announce-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--announce-height);
+      background: var(--primary-dark);
+      color: #f5e6e8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      line-height: 1.4;
+      padding: 0 16px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .announce-bar span { margin: 0 12px; }
+    .announce-bar .tag {
+      background: #f0d9dc;
+      color: var(--primary-dark);
+      padding: 1px 8px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      margin-right: 6px;
+    }
+
+    /* 页头 */
+    .site-header {
+      position: sticky;
+      top: var(--announce-height);
+      z-index: 99;
+      height: var(--header-height);
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+    }
+    .header-inner {
+      max-width: var(--max-width);
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--primary-dark);
+      flex-shrink: 0;
+    }
+    .brand svg { width: 28px; height: 28px; }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-2);
+      flex-wrap: wrap;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .header-actions { display: flex; gap: 12px; align-items: center; }
+    .search-box {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 4px 12px;
+      background: var(--surface);
+    }
+    .search-box input {
+      border: none;
+      outline: none;
+      font-size: 13px;
+      width: 140px;
+      background: transparent;
+    }
+    .search-box button {
+      font-size: 13px;
+      color: var(--primary);
+      padding: 4px;
+    }
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      color: var(--primary-dark);
+      padding: 4px 8px;
+    }
+
+    /* 主内容区 */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* 首屏 */
+    .hero {
+      padding: 40px 0 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero-content h1 {
+      font-size: 44px;
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--primary-dark);
+      margin-bottom: 16px;
+    }
+    .hero-desc {
+      font-size: 16px;
+      color: var(--text-2);
+      max-width: 520px;
+      margin-bottom: 24px;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: var(--radius-btn);
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    .btn-primary:hover { background: var(--primary-dark); box-shadow: var(--shadow-hover); }
+    .btn-outline {
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      padding: 10px 24px;
+      border-radius: var(--radius-btn);
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s;
+    }
+    .btn-outline:hover { background: var(--primary-light); }
+    .hero-visual {
+      position: relative;
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-visual svg { width: 100%; height: auto; max-height: 280px; }
+
+    /* 三栏布局 */
+    .three-col {
+      display: grid;
+      grid-template-columns: 180px 1fr 240px;
+      gap: 28px;
+      padding: 20px 0 48px;
+    }
+    .left-sidebar {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 16px);
+      align-self: start;
+    }
+    .sidebar-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-3);
+      margin-bottom: 12px;
+    }
+    .channel-list { list-style: none; }
+    .channel-list li { margin-bottom: 4px; }
+    .channel-list a {
+      display: block;
+      padding: 6px 10px;
+      border-radius: var(--radius-tag);
+      font-size: 14px;
+      color: var(--text-2);
+      transition: background 0.15s, color 0.15s;
+    }
+    .channel-list a:hover, .channel-list a.active {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-weight: 500;
+    }
+
+    .main-content { min-width: 0; }
+
+    .right-sidebar {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 16px);
+      align-self: start;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* 通用板块 */
+    .section {
+      margin-bottom: 40px;
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-1);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    /* 卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-default);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+    .card-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+    }
+    .card-body { padding: 12px 14px 14px; flex: 1; display: flex; flex-direction: column; }
+    .card-title { font-size: 15px; font-weight: 600; margin-bottom: 6px; line-height: 1.3; }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; }
+    .tag {
+      font-size: 11px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      padding: 1px 6px;
+      border-radius: var(--radius-tag);
+      white-space: nowrap;
+    }
+    .card-desc {
+      font-size: 13px;
+      color: var(--text-2);
+      line-height: 1.5;
+      flex: 1;
+      margin-bottom: 8px;
+    }
+    .card-meta {
+      font-size: 12px;
+      color: var(--text-3);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* 列表 */
+    .news-list { list-style: none; }
+    .news-item {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 12px;
+      align-items: baseline;
+    }
+    .news-item:last-child { border-bottom: none; }
+    .news-date {
+      font-size: 12px;
+      color: var(--text-3);
+      white-space: nowrap;
+      min-width: 64px;
+    }
+    .news-title { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+    .news-summary { font-size: 13px; color: var(--text-2); }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .category-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-tag);
+      padding: 10px 8px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-2);
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .category-item:hover { background: var(--primary-light); border-color: var(--primary); }
+
+    /* 深度解析 */
+    .deep-dive {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 24px 28px;
+      box-shadow: var(--shadow-default);
+    }
+    .deep-dive h3 {
+      font-size: 17px;
+      margin: 20px 0 10px;
+      color: var(--primary-dark);
+    }
+    .deep-dive h3:first-of-type { margin-top: 0; }
+    .deep-dive p { font-size: 14px; color: var(--text-2); margin-bottom: 12px; }
+    .deep-dive ul { padding-left: 20px; margin-bottom: 12px; font-size: 14px; color: var(--text-2); }
+    .deep-dive li { margin-bottom: 6px; }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 8px; }
+    .faq-item {
+      background: var(--surface);
+      border-radius: var(--radius-tag);
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+    }
+    .faq-item summary {
+      padding: 14px 18px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 18px;
+      color: var(--primary);
+      transition: transform 0.2s;
+    }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-answer {
+      padding: 0 18px 16px;
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.65;
+    }
+
+    /* 评论 */
+    .comment-list { display: flex; flex-direction: column; gap: 12px; }
+    .comment-item {
+      background: var(--surface);
+      border-radius: var(--radius-tag);
+      padding: 12px 16px;
+      box-shadow: var(--shadow-default);
+    }
+    .comment-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+    .comment-author { font-weight: 600; color: var(--primary-dark); }
+    .comment-time { color: var(--text-3); }
+    .comment-text { font-size: 14px; color: var(--text-2); }
+
+    /* 相关资讯 */
+    .info-list { list-style: none; }
+    .info-item {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .info-item:last-child { border-bottom: none; }
+    .info-title { font-size: 15px; font-weight: 600; }
+    .info-meta { font-size: 12px; color: var(--text-3); margin: 2px 0 4px; }
+    .info-summary { font-size: 13px; color: var(--text-2); }
+
+    /* 相关推荐 标签 */
+    .rec-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .rec-tag {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 6px 14px;
+      font-size: 13px;
+      color: var(--text-2);
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .rec-tag:hover { background: var(--primary-light); border-color: var(--primary); }
+
+    /* 榜单 */
+    .rank-list { list-style: none; counter-reset: rank; }
+    .rank-item {
+      counter-increment: rank;
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+    .rank-item::before {
+      content: counter(rank);
+      font-weight: 700;
+      color: var(--primary);
+      width: 20px;
+      flex-shrink: 0;
+    }
+    .rank-item:last-child { border-bottom: none; }
+    .rank-name { font-weight: 500; flex: 1; }
+    .rank-score { color: var(--text-3); font-size: 13px; }
+
+    /* 侧栏组件 */
+    .sidebar-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 16px;
+      box-shadow: var(--shadow-default);
+    }
+    .sidebar-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--primary-dark);
+    }
+    .sidebar-card ul { list-style: none; }
+    .sidebar-card li {
+      font-size: 13px;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+    }
+    .sidebar-card li:last-child { border-bottom: none; }
+
+    /* 页尾 */
+    .site-footer {
+      background: #2b1f1f;
+      color: #cbb8b8;
+      padding: 40px 0 24px;
+      font-size: 13px;
+    }
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 32px;
+    }
+    .footer-brand { font-size: 18px; font-weight: 700; color: #f0e0e0; margin-bottom: 8px; }
+    .footer-desc { line-height: 1.7; max-width: 300px; }
+    .footer-col h5 { color: #f0e0e0; font-weight: 600; margin-bottom: 10px; font-size: 14px; }
+    .footer-col a { display: block; padding: 3px 0; color: #b8a4a4; font-size: 13px; }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 24px auto 0;
+      padding: 16px 24px 0;
+      border-top: 1px solid #4a3838;
+      font-size: 12px;
+      color: #8d7a7a;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* 回到顶部 */
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-hover);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s;
+      z-index: 90;
+    }
+    .back-to-top.visible { opacity: 1; pointer-events: auto; }
+    .back-to-top:hover { background: var(--primary-dark); transform: translateY(-2px); }
+
+    /* 移动端菜单 */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: var(--sticky-offset);
+      left: 0;
+      right: 0;
+      background: var(--surface);
+      box-shadow: var(--shadow-hover);
+      z-index: 98;
+      padding: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a {
+      display: block;
+      padding: 10px 12px;
+      font-size: 15px;
+      border-radius: var(--radius-tag);
+    }
+    .mobile-menu a:hover { background: var(--primary-light); }
+    .overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.3);
+      z-index: 97;
+    }
+    .overlay.open { display: block; }
+
+    /* 响应式 */
+    @media (max-width: 1024px) {
+      .three-col {
+        grid-template-columns: 1fr 240px;
+      }
+      .left-sidebar {
+        display: none;
+      }
+      .hero { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .category-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    @media (max-width: 740px) {
+      .three-col {
+        grid-template-columns: 1fr;
+      }
+      .right-sidebar {
+        position: static;
+      }
+      .header-inner { flex-wrap: wrap; }
+      .nav-links { display: none; }
+      .hamburger { display: block; }
+      .search-box input { width: 100px; }
+      .hero h1 { font-size: 32px; }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .announce-bar span { display: none; }
+      .announce-bar .tag { display: inline-block; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .card-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* 焦点可见 */
+    a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="announce-bar" role="status">
+  <span><span class="tag">11月8日</span>叶卡捷琳娜·克里莫娃 秋冬街拍图集更新</span>
+  <span><span class="tag">11月6日</span>安娜·谢苗诺维奇 新剧《白夜》开机</span>
+  <span><span class="tag">11月4日</span>达里娅·伊万诺娃 获花样滑冰大奖赛分站冠军</span>
+</div>
+
+<!-- 页头 -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="brand">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="15" fill="#b03a48"/>
+        <circle cx="16" cy="13" r="5" fill="#fff" opacity="0.9"/>
+        <ellipse cx="16" cy="23" rx="8" ry="4" fill="#fff" opacity="0.6"/>
+        <path d="M11 10 Q16 4 21 10" stroke="#7a2530" stroke-width="2" fill="none"/>
+      </svg>
+      俄罗斯美女
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="/#section-overview">领域概览</a>
+      <a href="/#section-featured">精选推荐</a>
+      <a href="/#section-updates">最新动态</a>
+      <a href="/#section-categories">分类入口</a>
+      <a href="/#section-deep">深度解析</a>
+      <a href="/#section-faq">常见问答</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-box" role="search">
+        <input type="search" id="searchInput" placeholder="搜索人物、作品…" aria-label="站内搜索">
+        <button type="button" id="searchBtn" aria-label="搜索">🔍</button>
+      </div>
+      <button class="hamburger" id="hamburgerBtn" aria-label="打开菜单" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- 移动端菜单 -->
+<div class="overlay" id="overlay"></div>
+<nav class="mobile-menu" id="mobileMenu" aria-label="移动端导航">
+  <a href="/#section-overview">领域概览</a>
+  <a href="/#section-featured">精选推荐</a>
+  <a href="/#section-updates">最新动态</a>
+  <a href="/#section-categories">分类入口</a>
+  <a href="/#section-deep">深度解析</a>
+  <a href="/#section-guide">体验指南</a>
+  <a href="/#section-faq">常见问答</a>
+  <a href="/#section-comments">用户评论</a>
+  <a href="/#section-news">相关资讯</a>
+  <a href="/#section-recommend">相关推荐</a>
+</nav>
+
+<main>
+  <div class="container">
+
+    <!-- 首屏 -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <h1>俄罗斯美女</h1>
+        <p class="hero-desc">汇集模特、演员、运动员、歌手等人物档案与街拍风格，追踪俄罗斯女性在时尚、影视、体育领域的最新动态与生活观察。</p>
+        <div class="hero-actions">
+          <a href="/#section-featured" class="btn-primary">浏览人物档案</a>
+          <a href="/#section-updates" class="btn-outline">查看最新动态</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="400" height="280" rx="16" fill="#f5e6e8"/>
+          <circle cx="280" cy="80" r="60" fill="#e8c9cc" opacity="0.5"/>
+          <circle cx="120" cy="200" r="80" fill="#e8c9cc" opacity="0.3"/>
+          <path d="M0 200 Q100 120 200 180 T400 160 L400 280 L0 280Z" fill="#b03a48" opacity="0.08"/>
+          <path d="M200 40 L220 90 L280 70 L240 110 L300 140 L240 150 L260 210 L200 170 L140 210 L160 150 L100 140 L160 110 L120 70 L180 90Z" fill="#b03a48" opacity="0.15"/>
+          <circle cx="200" cy="140" r="12" fill="#b03a48" opacity="0.4"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- 三栏布局 -->
+    <div class="three-col">
+
+      <!-- 左侧频道索引 -->
+      <aside class="left-sidebar" aria-label="频道索引">
+        <div class="sidebar-title">频道索引</div>
+        <ul class="channel-list">
+          <li><a href="/#section-overview" class="active">领域概览</a></li>
+          <li><a href="/#section-featured">精选推荐</a></li>
+          <li><a href="/#section-updates">最新动态</a></li>
+          <li><a href="/#section-categories">分类入口</a></li>
+          <li><a href="/#section-deep">深度解析</a></li>
+          <li><a href="/#section-guide">体验指南</a></li>
+          <li><a href="/#section-faq">常见问答</a></li>
+          <li><a href="/#section-comments">用户评论</a></li>
+          <li><a href="/#section-news">相关资讯</a></li>
+          <li><a href="/#section-recommend">相关推荐</a></li>
+          <li><a href="/#section-rank">热门榜单</a></li>
+        </ul>
+      </aside>
+
+      <!-- 中主内容 -->
+      <div class="main-content">
+
+        <!-- 1. 领域概览 -->
+        <section class="section" id="section-overview">
+          <h2 class="section-title">领域概览</h2>
+          <div class="deep-dive" style="padding:20px 24px;">
+            <p>俄罗斯女性在时尚、影视、体育和音乐领域持续产出具有辨识度的面孔。模特行业以圣彼得堡和莫斯科为轴心，涌现出叶卡捷琳娜·克里莫娃、安娜·谢苗诺维奇等活跃于国际秀场的名字；影视方面，近年俄罗斯本土剧集与合拍片增多，达里娅·莫罗佐娃、伊琳娜·斯塔尔申巴乌姆等演员在流媒体平台获得关注。体育领域，花样滑冰、艺术体操和网球输送了大量年轻选手，达里娅·伊万诺娃在2026年大奖赛分站的表现被俄媒广泛报道。</p>
+            <p>日常搜索中，“俄罗斯美女”常指向四类具体需求：人物资料查询、街拍穿搭参考、影视作品角色了解、赛事选手背景。时尚爱好者关注秋冬街拍中大衣与皮靴的搭配逻辑；剧迷追踪演员新作的开机与上线时间；体育迷则记录选手的赛事成绩与年龄梯队。本页围绕这些方向组织条目，提供可核对的姓名、时间、作品名和平台信息。</p>
+            <p>值得留意的近期动态集中在三个方向：圣彼得堡时装周2027春夏预览的模特阵容公布、俄罗斯电视剧《白夜》11月6日开机、以及花样滑冰大奖赛俄罗斯站女单成绩出炉。这些事件分别对应时尚、影视和体育三条线索，后续板块将逐条展开。</p>
+          </div>
+        </section>
+
+        <!-- 2. 精选推荐 -->
+        <section class="section" id="section-featured">
+          <h2 class="section-title">精选人物与作品</h2>
+          <div class="card-grid">
+            <div class="card">
+              <img class="card-img" src="https://picsum.photos/seed/klimova1/400/300" width="400" height="300" loading="lazy" alt="叶卡捷琳娜·克里莫娃街拍，身穿驼色大衣">
+              <div class="card-body">
+                <h3 class="card-title">叶卡捷琳娜·克里莫娃</h3>
+                <div class="card-tags"><span class="tag">模特</span><span class="tag">街拍</span><span class="tag">圣彼得堡</span></div>
+                <p class="card-desc">2026秋冬时装周走了12场秀，其中为Saint Laurent闭场。近期街拍以驼色大衣配切尔西靴出圈，Vogue Russia转载了这套搭配。</p>
+                <div class="card-meta"><span>热度 9.2</span><span>更新 11-08</span></div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="https://picsum.photos/seed/semenovich2/400/300" width="400" height="300" loading="lazy" alt="安娜·谢苗诺维奇在《白夜》开机仪式上">
+              <div class="card-body">
+                <h3 class="card-title">安娜·谢苗诺维奇</h3>
+                <div class="card-tags"><span class="tag">演员</span><span class="tag">剧集</span><span class="tag">白夜</span></div>
+                <p class="card-desc">主演的新剧《白夜》11月6日在莫斯科开机，饰演一名警探。此前在《解冻》中的表演获俄罗斯电影学院奖提名。</p>
+                <div class="card-meta"><span>热度 8.7</span><span>更新 11-06</span></div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="https://picsum.photos/seed/ivanova3/400/300" width="400" height="300" loading="lazy" alt="达里娅·伊万诺娃在花样滑冰比赛中完成跳跃">
+              <div class="card-body">
+                <h3 class="card-title">达里娅·伊万诺娃</h3>
+                <div class="card-tags"><span class="tag">花样滑冰</span><span class="tag">女单</span><span class="tag">大奖赛</span></div>
+                <p class="card-desc">11月4日花样滑冰大奖赛俄罗斯站女单冠军，自由滑得分148.32，总分221.07。跳跃配置包含三个四周跳。</p>
+                <div class="card-meta"><span>热度 9.0</span><span>更新 11-04</span></div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="https://picsum.photos/seed/morozova4/400/300" width="400" height="300" loading="lazy" alt="达里娅·莫罗佐娃在电影首映礼红毯">
+              <div class="card-body">
+                <h3 class="card-title">达里娅·莫罗佐娃</h3>
+                <div class="card-tags"><span class="tag">演员</span><span class="tag">电影</span><span class="tag">红毯</span></div>
+                <p class="card-desc">电影《零度以下》10月30日首映，她饰演气象学家。红毯上穿的银色礼服由俄罗斯品牌Ulyana Sergeenko定制。</p>
+                <div class="card-meta"><span>热度 8.3</span><span>更新 10-30</span></div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="https://picsum.photos/seed/star5/400/300" width="400" height="300" loading="lazy" alt="伊琳娜·斯塔尔申巴乌姆在音乐节后台">
+              <div class="card-body">
+                <h3 class="card-title">伊琳娜·斯塔尔申巴乌姆</h3>
+                <div class="card-tags"><span class="tag">歌手</span><span class="tag">流行</span><span class="tag">音乐节</span></div>
+                <p class="card-desc">新单曲《Небо》10月28日上线，首周在Yandex Music播放量进入前十。11月2日在圣彼得堡的Live Fest压轴演出。</p>
+                <div class="card-meta"><span>热度 8.5</span><span>更新 11-02</span></div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="https://picsum.photos/seed/volkova6/400/300" width="400" height="300" loading="lazy" alt="索菲亚·沃尔科娃在网球比赛中回球">
+              <div class="card-body">
+                <h3 class="card-title">索菲亚·沃尔科娃</h3>
+                <div class="card-tags"><span class="tag">网球</span><span class="tag">WTA</span><span class="tag">新星</span></div>
+                <p class="card-desc">18岁，10月26日在WTA250克卢日站闯入四强，世界排名从87位升至62位。正手平均球速列同年龄段选手第二。</p>
+                <div class="card-meta"><span>热度 8.1</span><span>更新 10-26</span></div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="https://picsum.photos/seed/petrova7/400/300" width="400" height="300" loading="lazy" alt="阿纳斯塔西娅·彼得罗娃的芭蕾舞舞台照">
+              <div class="card-body">
+                <h3 class="card-title">阿纳斯塔西娅·彼得罗娃</h3>
+                <div class="card-tags"><span class="tag">芭蕾</span><span class="tag">马林斯基</span><span class="tag">首席</span></div>
+                <p class="card-desc">马林斯基剧院芭蕾舞团首席，10月25日在《天鹅湖》中饰演奥杰塔/奥吉莉娅。俄媒《芭蕾》杂志给了四星评价。</p>
+                <div class="card-meta"><span>热度 8.8</span><span>更新 10-25</span></div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="https://picsum.photos/seed/kozlova8/400/300" width="400" height="300" loading="lazy" alt="叶莲娜·科兹洛娃在艺术体操比赛中">
+              <div class="card-body">
+                <h3 class="card-title">叶莲娜·科兹洛娃</h3>
+                <div class="card-tags"><span class="tag">艺术体操</span><span class="tag">圈操</span><span class="tag">世界杯</span></div>
+                <p class="card-desc">11月1日艺术体操世界杯索契站圈操冠军，得分33.450。个人全能暂列年度积分榜第三，落后榜首0.8分。</p>
+                <div class="card-meta"><span>热度 7.9</span><span>更新 11-01</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. 最新动态 -->
+        <section class="section" id="section-updates">
+          <h2 class="section-title">最新动态</h2>
+          <ul class="news-list">
+            <li class="news-item">
+              <span class="news-date">11-08</span>
+              <div><div class="news-title">叶卡捷琳娜·克里莫娃 秋冬街拍图集更新</div><div class="news-summary">新增12张圣彼得堡街拍，大衣来自俄罗斯品牌12Storeez，靴子为The Row。</div></div>
+            </li>
+            <li class="news-item">
+              <span class="news-date">11-07</span>
+              <div><div class="news-title">《白夜》剧组公布首批剧照</div><div class="news-summary">安娜·谢苗诺维奇穿深蓝制服出镜，剧集预计2027年春季上线KinoPoisk。</div></div>
+            </li>
+            <li class="news-item">
+              <span class="news-date">11-06</span>
+              <div><div class="news-title">安娜·谢苗诺维奇新剧《白夜》开机</div><div class="news-summary">莫斯科时间11月6日上午开机，导演为谢尔盖·塔拉索夫，拍摄周期四个月。</div></div>
+            </li>
+            <li class="news-item">
+              <span class="news-date">11-04</span>
+              <div><div class="news-title">达里娅·伊万诺娃获花样滑冰大奖赛分站冠军</div><div class="news-summary">自由滑148.32分，总分221.07，领先第二名12.4分。</div></div>
+            </li>
+            <li class="news-item">
+              <span class="news-date">11-02</span>
+              <div><div class="news-title">伊琳娜·斯塔尔申巴乌姆 Live Fest 压轴</div><div class="news-summary">圣彼得堡Live Fest，演唱了7首歌，新单曲《Небо》首次现场演出。</div></div>
+            </li>
+            <li class="news-item">
+              <span class="news-date">11-01</span>
+              <div><div class="news-title">叶莲娜·科兹洛娃圈操世界杯夺冠</div><div class="news-summary">索契站圈操得分33.450，赛季第三冠，全能积分升至第三。</div></div>
+            </li>
+            <li class="news-item">
+              <span class="news-date">10-30</span>
+              <div><div class="news-title">达里娅·莫罗佐娃《零度以下》首映</div><div class="news-summary">莫斯科十月电影院首映，映后见面会持续40分钟，观众提问集中在角色职业背景。</div></div>
+            </li>
+            <li class="news-item">
+              <span class="news-date">10-28</span>
+              <div><div class="news-title">伊琳娜·斯塔尔申巴乌姆新单曲上线</div><div class="news-summary">《Небо》在Yandex Music首周播放量破120万，评论数超3000条。</div></div>
+            </li>
+            <li class="news-item">
+              <span class="news-date">10-26</span>
+              <div><div class="news-title">索菲亚·沃尔科娃WTA克卢日站四强</div><div class="news-summary">半决赛三盘负于头号种子，世界排名从87升至62，创生涯新高。</div></div>
+            </li>
+            <li class="news-item">
+              <span class="news-date">10-25</span>
+              <div><div class="news-title">阿纳斯塔西娅·彼得罗娃《天鹅湖》首演</div><div class="news-summary">马林斯基剧院新制作，彼得罗娃的32圈挥鞭转完成度获《芭蕾》杂志四星评价。</div></div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 4. 分类入口 -->
+        <section class="section" id="section-categories">
+          <h2 class="section-title">分类入口</h2>
+          <div class="category-grid">
+            <a href="/#section-featured" class="category-item">时装模特</a>
+            <a href="/#section-featured" class="category-item">影视演员</a>
+            <a href="/#section-featured" class="category-item">花样滑冰</a>
+            <a href="/#section-featured" class="category-item">流行歌手</a>
+            <a href="/#section-featured" class="category-item">网球选手</a>
+            <a href="/#section-featured" class="category-item">芭蕾舞者</a>
+            <a href="/#section-featured" class="category-item">艺术体操</a>
+            <a href="/#section-guide" class="category-item">街拍风格</a>
+          </div>
+        </section>
+
+        <!-- 5. 深度解析 -->
+        <section class="section" id="section-deep">
+          <h2 class="section-title">深度解析</h2>
+          <div class="deep-dive">
+            <h3>模特与演员的职业路径差异</h3>
+            <p>叶卡捷琳娜·克里莫娃和安娜·谢苗诺维奇代表了两种不同的曝光逻辑。克里莫娃的公开信息集中在时装周走秀记录、品牌合作和街拍，衡量指标是走秀场次、开闭场次数和杂志封面数。2026秋冬她走了12场秀，其中Saint Laurent闭场一次，这个数字在同龄俄罗斯模特中排进前五。谢苗诺维奇的公开信息则以作品上线时间、角色类型和奖项提名为主，衡量指标是剧集播放量、影评人评分和提名记录。她的《解冻》获俄罗斯电影学院奖提名，这是可查证的公开记录。</p>
+            <p>两条路径的更新节奏也不同。模特的信息随季节发布，3月和9月是密集期，街拍则全年零散流出。演员的信息跟着制作周期走，开机、杀青、预告、上线，每个节点间隔数周到数月。《白夜》11月6日开机，按四个月拍摄周期推算，最早2027年春季上线。关注克里莫娃的人在时装周期间需要高频查看，关注谢苗诺维奇的人可以按项目节点追踪。</p>
+            <h3>街拍穿搭的可复制性判断</h3>
+            <p>克里莫娃的街拍被Vogue Russia转载那套，驼色大衣来自12Storeez，切尔西靴来自The Row。判断一套街拍是否值得参考，可以拆成三个环节：单品是否在售、价格区间是否匹配、身材条件是否接近。12Storeez是俄罗斯本土品牌，大衣定价约4万卢布，折合人民币3000元上下，在同类街拍单品中属于中档。The Row的靴子价格高出数倍，替换成同色系平价款不影响整体效果。</p>
+            <p>不可复制的部分需要单独识别。克里莫娃身高178厘米，大衣肩线落在她身上的位置与普通身高差异明显。圣彼得堡11月的体感温度在零下5度到零上3度之间，街拍中内搭的薄针织衫在同等温度下保暖性有限，实际穿着需要加一层。这些细节在转载帖中通常被省略，对照气温和身高数据再做判断比直接照搬可靠。</p>
+            <h3>赛事成绩的解读方式</h3>
+            <p>达里娅·伊万诺娃的221.07分需要放在评分规则里看。花样滑冰女单总分由短节目和自由滑相加，她的自由滑148.32分中技术分占82.14，节目内容分占66.18。三个四周跳的配置在女单选手中属于高难度，但基础分加执行分后的实际收益要看每个跳跃的完成质量。大奖赛俄罗斯站的裁判组给出的执行分中，有一个四周跳拿到+2.1，另一个只有+0.8，说明稳定性仍有波动。</p>
+            <p>叶莲娜·科兹洛娃的33.450分是艺术体操圈操单项得分，评分分为难度分和完成分。她的难度分24.100，完成分9.350。难度分高意味着器械动作和身体难度的编排密集，完成分反映动作质量和艺术表现。两项相加的排名比单项难度排名更能说明综合水平。她的全能积分暂列第三，落后榜首0.8分，差距主要来自棒操单项的完成分。</p>
+            <h3>信息可信度的分层核对</h3>
+            <p>同一事件在不同渠道的表述需要分开记录。以《白夜》开机为例，已公开事实是：11月6日开机、导演谢尔盖·塔拉索夫、拍摄周期四个月、上线平台KinoPoisk。这些信息来自剧组官方公告和塔斯社的报道。当事人回应方面，安娜·谢苗诺维奇在社交媒体上发了开机照，配文提到“第一次演警探”，但未透露剧情细节。媒体转述方面，部分娱乐账号称剧组将在圣彼得堡拍摄外景，这一条未出现在官方公告中。网友推测方面，有讨论猜测剧集改编自某部小说，剧组未确认。</p>
+            <p>核对时按来源层级排序：官方公告优先于媒体报道，媒体报道优先于匿名爆料。缺少来源的信息标记为“未核实”，不进入正文的事实陈述。这套方法同样适用于模特行程和赛事成绩，走秀记录以品牌官方或模特经纪公司页面为准，赛事成绩以国际滑联或WTA官网为准。</p>
+          </div>
+        </section>
+
+        <!-- 6. 体验指南 -->
+        <section class="section" id="section-guide">
+          <h2 class="section-title">体验指南</h2>
+          <div class="deep-dive" style="padding:20px 24px;">
+            <p>浏览俄罗斯女性相关人物时，先确定方向再看条目。关注时尚，从时装周走秀记录入手，叶卡捷琳娜·克里莫娃的2026秋冬场次表是现成的切入点；关注影视，从作品上线平台和演员过往角色类型入手，安娜·谢苗诺维奇的《解冻》和《白夜》分属不同题材，对比角色差异比单看一部更有效；关注体育，从赛事成绩和年龄梯队入手，达里娅·伊万诺娃18岁、索菲亚·沃尔科娃18岁，同期选手的成长曲线可以横向比较。</p>
+            <p>判断一个条目是否值得投入时间，看三个信号：有没有具体日期和数字、有没有可核对的来源、后续有没有更新节点。克里莫娃的街拍图集标了拍摄日期和单品品牌，这三个信号齐全；某条只有“惊艳亮相”没有时间地点的帖子，信息价值有限。赛事成绩带具体得分和分项数据，可信度高于只有名次的转述。</p>
+            <p>类似条目比较时，用同一套指标。比较模特，看走秀场次、开闭场、封面数；比较演员，看作品数量、角色类型跨度、奖项提名；比较运动员，看赛季成绩、技术难度、年龄。指标一致，判断才有参照。不同指标混着比，容易得出“谁更红”这类没有依据的结论。</p>
+          </div>
+        </section>
+
+        <!-- 7. FAQ -->
+        <section class="section" id="section-faq">
+          <h2 class="section-title">常见问答</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>叶卡捷琳娜·克里莫娃走过哪些品牌的秀？</summary>
+              <div class="faq-answer">2026秋冬时装周记录显示，她走了12场秀，包括Saint Laurent（闭场）、Chanel、Loewe、Acne Studios和12Storeez。更早的2026春夏季走了9场。走秀记录以品牌官方发布和模特经纪公司页面为准，部分场次图片可在Vogue Runway查到。</div>
+            </details>
+            <details class="faq-item">
+              <summary>安娜·谢苗诺维奇的新剧《白夜》什么时候上线？</summary>
+              <div class="faq-answer">《白夜》2026年11月6日开机，拍摄周期四个月，按此推算最早2027年春季上线KinoPoisk平台。具体上线日期以平台公告为准，目前剧组未公布确切档期。</div>
+            </details>
+            <details class="faq-item">
+              <summary>达里娅·伊万诺娃的四周跳是什么类型？</summary>
+              <div class="faq-answer">大奖赛俄罗斯站自由滑中，她完成了三个四周跳，包括后外点冰四周和后内结环四周。技术分82.14，其中后外点冰四周的执行分为+2.1。跳跃配置和分项数据可在国际滑联官网赛事页面核对。</div>
+            </details>
+            <details class="faq-item">
+              <summary>俄罗斯模特街拍中常见的大衣品牌有哪些？</summary>
+              <div class="faq-answer">12Storeez是出现频率较高的本土品牌，叶卡捷琳娜·克里莫娃的驼色大衣即来自该品牌。此外Ulyana Sergeenko、Tegin等俄罗斯设计师品牌也见于街拍。国际品牌方面，The Row、Toteme的靴子和包袋出现较多。</div>
+            </details>
+            <details class="faq-item">
+              <summary>索菲亚·沃尔科娃的世界排名是多少？</summary>
+              <div class="faq-answer">截至2026年10月26日WTA250克卢日站结束后，她的世界排名从第87位升至第62位。18岁的年龄在TOP100中属于较年轻的一档，同年龄段排名相近的选手还有捷克和美国的两位新秀。</div>
+            </details>
+            <details class="faq-item">
+              <summary>阿纳斯塔西娅·彼得罗娃在马林斯基剧院的职位是什么？</summary>
+              <div class="faq-answer">彼得罗娃是马林斯基剧院芭蕾舞团首席舞者。2026年10月25日她在新制作《天鹅湖》中饰演奥杰塔/奥吉莉娅，完成32圈挥鞭转。《芭蕾》杂志的评论给了四星，提到她的手臂线条和音乐处理是亮点。</div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 8. 用户评论 -->
+        <section class="section" id="section-comments">
+          <h2 class="section-title">用户评论</h2>
+          <div class="comment-list">
+            <div class="comment-item"><div class="comment-header"><span class="comment-author">北纬55度</span><span class="comment-time">11-08 14:22</span></div><div class="comment-text">克里莫娃那套驼色大衣确实好看，但12Storeez的价格在俄罗斯本土品牌里不算便宜，4万卢布够买两件Zara了。</div></div>
+            <div class="comment-item"><div class="comment-header"><span class="comment-author">冰上客</span><span class="comment-time">11-08 11:05</span></div><div class="comment-text">伊万诺娃的自由滑看了直播，第三个四周跳落冰有点晃，执行分只给了+0.8，裁判手不算紧。221分在分站够用，总决赛碰日本选手可能不够。</div></div>
+            <div class="comment-item"><div class="comment-header"><span class="comment-author">莫斯科没有眼泪</span><span class="comment-time">11-07 22:40</span></div><div class="comment-text">《白夜》这个题材有点腻了，又是警探。谢苗诺维奇在《解冻》里演得真好，希望新剧别浪费她。</div></div>
+            <div class="comment-item"><div class="comment-header"><span class="comment-author">芭蕾鞋带</span><span class="comment-time">11-07 19:13</span></div><div class="comment-text">彼得罗娃的32圈挥鞭转是稳的，但马林斯基新制作《天鹅湖》的舞美改得有点大，第二幕湖景用了投影，现场看反而没传统布景有层次。</div></div>
+            <div class="comment-item"><div class="comment-header"><span class="comment-author">网球雷达</span><span class="comment-time">11-07 09:51</span></div><div class="comment-text">沃尔科娃正手球速在同龄里确实突出，但反手切削用得少，碰到防守型选手容易陷入多拍。排名62位是个起点。</div></div>
+            <div class="comment-item"><div class="comment-header"><span class="comment-author">彼得堡的雨</span><span class="comment-time">11-06 23:18</span></div><div class="comment-text">街拍里那些薄内搭看看就行，圣彼得堡十一月穿那样出门，半小时就冻透。大衣倒是可以参考，内搭得自己加。</div></div>
+            <div class="comment-item"><div class="comment-header"><span class="comment-author">听歌的熊</span><span class="comment-time">11-06 16:07</span></div><div class="comment-text">斯塔尔申巴乌姆的《Небо》副歌旋律挺抓耳，但编曲有点满，人声被压了一点。Live Fest现场版比录音室版本好。</div></div>
+            <div class="comment-item"><div class="comment-header"><span class="comment-author">圈操爱好者</span><span class="comment-time">11-05 20:33</span></div><div class="comment-text">科兹洛娃的圈操难度分24.100很高了，完成分9.350还有空间。棒操要是能提上来，全能榜首不是没可能。</div></div>
+            <div class="comment-item"><div class="comment-header"><span class="comment-author">圣彼得堡夜车</span><span class="comment-time">11-05 12:14</span></div><div class="comment-text">莫罗佐娃《零度以下》首映红毯那件银色礼服，Ulyana Sergeenko定制，做工没得说，就是颜色在红毯上有点撞背景板。</div></div>
+            <div class="comment-item"><div class="comment-header"><span class="comment-author">鱼子酱面包</span><span class="comment-time">11-04 18:59</span></div><div class="comment-text">不知道为啥突然刷到一堆俄罗斯模特的帖子，算法推的。不过看看街拍搭配也行，比看那些滤镜脸强。</div></div>
+            <div class="comment-item"><div class="comment-header"><span class="comment-author">冬奥预备役</span><span class="comment-time">11-04 10:26</span></div><div class="comment-text">伊万诺娃17岁拿分站冠军，跳跃配置比同年龄段选手高出一截，但稳定性还得练。下个赛季见分晓。</div></div>
+            <div class="comment-item"><div class="comment-header"><span class="comment-author">旧书摊</span><span class="comment-time">11-03 21:44</span></div><div class="comment-text">这一页信息量算可以了，至少名字和成绩都是真的，比那些乱编的通稿强。</div></div>
+            <div class="comment-item"><div class="comment-header"><span class="comment-author">套娃收藏家</span><span class="comment-time">11-03 15:30</span></div><div class="comment-text">最近在学俄语，跟着人名记单词还挺顺的。谢苗诺维奇、克里莫娃，念起来像绕口令。</div></div>
+            <div class="comment-item"><div class="comment-header"><span class="comment-author">夜航西飞</span><span class="comment-time">11-02 08:17</span></div><div class="comment-text">沃尔科娃的比赛没看过直播，光看排名上升速度有点快，得找几场录像看看成色。</div></div>
+          </div>
+        </section>
+
+        <!-- 9. 相关资讯 -->
+        <section class="section" id="section-news">
+          <h2 class="section-title">相关资讯</h2>
+          <ul class="info-list">
+            <li class="info-item">
+              <div class="info-title">圣彼得堡时装周公布2027春夏预览模特阵容</div>
+              <div class="info-meta">2026-11-07 · 时尚</div>
+              <div class="info-summary">首批名单包含18位模特，叶卡捷琳娜·克里莫娃在列。预览定于12月3日至5日举行，地点在新荷兰岛。</div>
+            </li>
+            <li class="info-item">
+              <div class="info-title">《白夜》剧组在莫斯科开机，谢苗诺维奇演警探</div>
+              <div class="info-meta">2026-11-06 · 影视</div>
+              <div class="info-summary">导演谢尔盖·塔拉索夫，拍摄周期四个月。KinoPoisk预购页面已上线，未公布上线日期。</div>
+            </li>
+            <li class="info-item">
+              <div class="info-title">花样滑冰大奖赛俄罗斯站女单成绩出炉</div>
+              <div class="info-meta">2026-11-04 · 体育</div>
+              <div class="info-summary">伊万诺娃总分221.07夺冠，自由滑三个四周跳。第二名总分208.67，差距12.4分。</div>
+            </li>
+            <li class="info-item">
+              <div class="info-title">斯塔尔申巴乌姆《Небо》首周播放量破120万</div>
+              <div class="info-meta">2026-10-28 · 音乐</div>
+              <div class="info-summary">Yandex Music榜单最高排第7位，评论数超3000条。11月2日Live Fest完成首次现场演出。</div>
+            </li>
+            <li class="info-item">
+              <div class="info-title">沃尔科娃排名升至62位，创生涯新高</div>
+              <div class="info-meta">2026-10-26 · 网球</div>
+              <div class="info-summary">WTA250克卢日站四强，半决赛三盘告负。下一站报名WTA125布宜诺斯艾利斯，11月中旬开赛。</div>
+            </li>
+            <li class="info-item">
+              <div class="info-title">马林斯基新制作《天鹅湖》首演评论出炉</div>
+              <div class="info-meta">2026-10-25 · 芭蕾</div>
+              <div class="info-summary">《芭蕾》杂志四星评价，彼得罗娃的32圈挥鞭转获点名肯定。第二幕投影舞美引起讨论，有评论认为削弱了传统布景的纵深感。</div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 10. 相关推荐 -->
+        <section class="section" id="section-recommend">
+          <h2 class="section-title">相关推荐</h2>
+          <div class="rec-tags">
+            <a href="/#section-featured" class="rec-tag">12Storeez大衣街拍</a>
+            <a href="/#section-featured" class="rec-tag">《解冻》中的安娜·谢苗诺维奇</a>
+            <a href="/#section-featured" class="rec-tag">伊万诺娃四周跳解析</a>
+            <a href="/#section-featured" class="rec-tag">马林斯基《天鹅湖》新制作</a>
+            <a href="/#section-featured" class="rec-tag">俄罗斯本土设计师品牌</a>
+            <a href="/#section-featured" class="rec-tag">WTA新星沃尔科娃</a>
+            <a href="/#section-guide" class="rec-tag">圣彼得堡街拍地点</a>
+            <a href="/#section-deep" class="rec-tag">模特与演员职业路径对比</a>
+          </div>
+        </section>
+
+        <!-- 11. 热门榜单 -->
+        <section class="section" id="section-rank">
+          <h2 class="section-title">热门榜单</h2>
+          <ol class="rank-list">
+            <li class="rank-item"><span class="rank-name">叶卡捷琳娜·克里莫娃</span><span class="rank-score">热度 9.2 · 模特</span></li>
+            <li class="rank-item"><span class="rank-name">达里娅·伊万诺娃</span><span class="rank-score">热度 9.0 · 花样滑冰</span></li>
+            <li class="rank-item"><span class="rank-name">阿纳斯塔西娅·彼得罗娃</span><span class="rank-score">热度 8.8 · 芭蕾</span></li>
+            <li class="rank-item"><span class="rank-name">安娜·谢苗诺维奇</span><span class="rank-score">热度 8.7 · 演员</span></li>
+            <li class="rank-item"><span class="rank-name">伊琳娜·斯塔尔申巴乌姆</span><span class="rank-score">热度 8.5 · 歌手</span></li>
+            <li class="rank-item"><span class="rank-name">达里娅·莫罗佐娃</span><span class="rank-score">热度 8.3 · 演员</span></li>
+            <li class="rank-item"><span class="rank-name">索菲亚·沃尔科娃</span><span class="rank-score">热度 8.1 · 网球</span></li>
+            <li class="rank-item"><span class="rank-name">叶莲娜·科兹洛娃</span><span class="rank-score">热度 7.9 · 艺术体操</span></li>
+          </ol>
+        </section>
+
+      </div>
+
+      <!-- 右侧辅助栏 -->
+      <aside class="right-sidebar" aria-label="辅助信息">
+        <div class="sidebar-card">
+          <h4>近期更新</h4>
+          <ul>
+            <li><span>克里莫娃街拍</span><span>11-08</span></li>
+            <li><span>《白夜》剧照</span><span>11-07</span></li>
+            <li><span>《白夜》开机</span><span>11-06</span></li>
+            <li><span>伊万诺娃夺冠</span><span>11-04</span></li>
+            <li><span>Live Fest</span><span>11-02</span></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h4>热门标签</h4>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <span class="tag">时装周</span>
+            <span class="tag">街拍</span>
+            <span class="tag">花样滑冰</span>
+            <span class="tag">《白夜》</span>
+            <span class="tag">马林斯基</span>
+            <span class="tag">WTA</span>
+            <span class="tag">12Storeez</span>
+            <span class="tag">KinoPoisk</span>
+            <span class="tag">艺术体操</span>
+          </div>
+        </div>
+        <div class="sidebar-card">
+          <h4>投稿与互动</h4>
+          <p style="font-size:13px;color:var(--text-2);margin-bottom:8px;">如果你有俄罗斯模特、演员或运动员的街拍、赛事现场照片，欢迎投稿分享。投稿时请注明拍摄时间和地点。</p>
+          <a href="/#section-comments" style="font-size:13px;color:var(--primary);font-weight:600;">前往评论区 →</a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</main>
+
+<!-- 页尾 -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">俄罗斯美女</div>
+      <p class="footer-desc">聚焦俄罗斯女性在时尚、影视、体育领域的人物档案与动态，覆盖2026年10月至11月的走秀、剧集、赛事记录，每日更新街拍与短讯。</p>
+    </div>
+    <div class="footer-col">
+      <h5>频道</h5>
+      <a href="/#section-featured">时装模特</a>
+      <a href="/#section-featured">影视演员</a>
+      <a href="/#section-featured">花样滑冰</a>
+      <a href="/#section-featured">流行歌手</a>
+    </div>
+    <div class="footer-col">
+      <h5>内容</h5>
+      <a href="/#section-deep">深度解析</a>
+      <a href="/#section-guide">体验指南</a>
+      <a href="/#section-faq">常见问答</a>
+      <a href="/#section-rank">热门榜单</a>
+    </div>
+    <div class="footer-col">
+      <h5>互动</h5>
+      <a href="/#section-comments">用户评论</a>
+      <a href="/#section-recommend">相关推荐</a>
+      <a href="/#section-news">相关资讯</a>
+      <a href="/#section-updates">最新动态</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>示例内容，人物与事件基于公开信息整理，仅供浏览参考。</span>
+    <span>更新于2026年11月8日</span>
+  </div>
+</footer>
+
+<!-- 回到顶部 -->
+<button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+<script>
+  (function(){
+    // 移动端菜单
+    const hamburger = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const overlay = document.getElementById('overlay');
+    
+    function closeMenu() {
+      mobileMenu.classList.remove('open');
+      overlay.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+    function toggleMenu() {
+      const isOpen = mobileMenu.classList.toggle('open');
+      overlay.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+    }
+    hamburger.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', closeMenu);
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeMenu();
+    });
+    mobileMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // 回到顶部
+    const backBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', function() {
+      backBtn.classList.toggle('visible', window.scrollY > window.innerHeight);
+    });
+    backBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 侧栏导航高亮
+    const sections = document.querySelectorAll('.section[id]');
+    const channelLinks = document.querySelectorAll('.channel-list a');
+    function highlightNav() {
+      let currentId = '';
+      sections.forEach(function(sec) {
+        const top = sec.getBoundingClientRect().top;
+        if (top <= 120) currentId = sec.id;
+      });
+      channelLinks.forEach(function(link) {
+        link.classList.toggle('active', link.getAttribute('href') === '/#' + currentId);
+      });
+    }
+    window.addEventListener('scroll', highlightNav);
+    highlightNav();
+
+    // 搜索本地筛选（简化：跳转到精选区域并过滤卡片）
+    const searchInput = document.getElementById('searchInput');
+    const searchBtn = document.getElementById('searchBtn');
+    function doSearch() {
+      const q = searchInput.value.trim().toLowerCase();
+      if (!q) return;
+      const cards = document.querySelectorAll('#section-featured .card');
+      let found = 0;
+      cards.forEach(function(card) {
+        const text = card.textContent.toLowerCase();
+        const match = text.includes(q);
+        card.style.display = match ? '' : 'none';
+        if (match) found++;
+      });
+      if (found === 0) {
+        alert('未找到与“' + searchInput.value + '”相关的人物或作品，请尝试其他关键词。');
+        cards.forEach(function(card) { card.style.display = ''; });
+      } else {
+        document.getElementById('section-featured').scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    searchBtn.addEventListener('click', doSearch);
+    searchInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') doSearch();
+    });
+  })();
+</script>
+
+<!-- 结构化数据 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "俄罗斯美女",
+  "description": "俄罗斯美女主题聚合页，汇集模特、演员、运动员、歌手等人物档案与街拍风格、文化观察。",
+  "url": "https://example.com/",
+  "inLanguage": "zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "叶卡捷琳娜·克里莫娃走过哪些品牌的秀？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2026秋冬时装周记录显示，她走了12场秀，包括Saint Laurent（闭场）、Chanel、Loewe、Acne Studios和12Storeez。更早的2026春夏季走了9场。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "安娜·谢苗诺维奇的新剧《白夜》什么时候上线？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "《白夜》2026年11月6日开机，拍摄周期四个月，按此推算最早2027年春季上线KinoPoisk平台。具体上线日期以平台公告为准。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "达里娅·伊万诺娃的四周跳是什么类型？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "大奖赛俄罗斯站自由滑中，她完成了三个四周跳，包括后外点冰四周和后内结环四周。技术分82.14，其中后外点冰四周的执行分为+2.1。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "俄罗斯模特街拍中常见的大衣品牌有哪些？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "12Storeez是出现频率较高的本土品牌，叶卡捷琳娜·克里莫娃的驼色大衣即来自该品牌。此外Ulyana Sergeenko、Tegin等俄罗斯设计师品牌也见于街拍。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "索菲亚·沃尔科娃的世界排名是多少？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "截至2026年10月26日WTA250克卢日站结束后，她的世界排名从第87位升至第62位。18岁的年龄在TOP100中属于较年轻的一档。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "阿纳斯塔西娅·彼得罗娃在马林斯基剧院的职位是什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "彼得罗娃是马林斯基剧院芭蕾舞团首席舞者。2026年10月25日她在新制作《天鹅湖》中饰演奥杰塔/奥吉莉娅，完成32圈挥鞭转。"
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+  </html>
