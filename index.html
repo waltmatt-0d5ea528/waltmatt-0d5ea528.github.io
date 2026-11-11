@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>极乐门 - 灵异怪谈与民俗探秘</title>
+  <meta name="description" content="极乐门汇聚民间怪谈、都市传说、民俗禁忌与灵异事件解读，提供具体案例、规则拆解与真实用户讨论，适合喜欢悬疑志怪与本土民俗的读者深入浏览。">
+  <meta name="keywords" content="极乐门">
+  <style>
+    /* ---------- CSS Variables ---------- */
+    :root {
+      --primary: #2a1e1a;
+      --primary-light: #4a3a34;
+      --primary-dark: #1a1210;
+      --accent: #b84a2e;
+      --accent-light: #d95e3a;
+      --accent-dark: #8a3420;
+      --bg: #f7f2ec;
+      --surface: #ffffff;
+      --text-primary: #1f1a17;
+      --text-secondary: #5c4f48;
+      --text-tertiary: #8c7b72;
+      --divider: #e3d9d1;
+      --radius-card: 12px;
+      --radius-btn: 8px;
+      --radius-tag: 20px;
+      --radius-banner: 16px;
+      --shadow-default: 0 2px 8px rgba(42, 30, 26, 0.06);
+      --shadow-hover: 0 8px 24px rgba(42, 30, 26, 0.12);
+      --font-serif: "Noto Serif SC", "Songti SC", "SimSun", serif;
+      --font-sans: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+      --sticky-height: 104px;
+      --max-width: 1360px;
+      --gap: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--sticky-height) + 16px);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    /* ---------- Sticky Wrapper ---------- */
+    .sticky-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247, 242, 236, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--divider);
+    }
+
+    /* ---------- Announcement Bar ---------- */
+    .announcement-bar {
+      background: var(--primary-dark);
+      color: #f0e8e2;
+      font-size: 13px;
+      padding: 8px 0;
+      overflow: hidden;
+    }
+
+    .announcement-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .announce-brand {
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      color: var(--accent-light);
+      white-space: nowrap;
+    }
+
+    .announce-items {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 13px;
+    }
+
+    .announce-items span {
+      white-space: nowrap;
+    }
+
+    .announce-items .date {
+      color: #c9b8ae;
+      margin-right: 4px;
+    }
+
+    /* ---------- Header ---------- */
+    .site-header {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 2px;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .main-nav a {
+      padding: 6px 14px;
+      border-radius: var(--radius-btn);
+      font-size: 14px;
+      color: var(--text-secondary);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus-visible {
+      background: var(--primary-light);
+      color: #fff;
+      outline: none;
+    }
+
+    .main-nav a:focus-visible {
+      box-shadow: 0 0 0 3px rgba(184, 74, 46, 0.4);
+    }
+
+    .header-actions {
+      margin-left: auto;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      border-radius: var(--radius-btn);
+      padding: 6px 12px;
+      gap: 6px;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      font-size: 14px;
+      width: 160px;
+      background: transparent;
+      color: var(--text-primary);
+    }
+
+    .search-box input::placeholder {
+      color: var(--text-tertiary);
+    }
+
+    .search-box button {
+      color: var(--text-tertiary);
+      display: flex;
+      align-items: center;
+      padding: 2px;
+    }
+
+    .search-box button:hover {
+      color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      padding: 8px;
+      border-radius: var(--radius-btn);
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      color: var(--text-primary);
+    }
+
+    .menu-toggle:focus-visible {
+      outline: 3px solid rgba(184, 74, 46, 0.5);
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 48px 24px 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-family: var(--font-serif);
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 4px;
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .hero-desc {
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      max-width: 520px;
+      margin-bottom: 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 10px 28px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: var(--radius-btn);
+      font-size: 15px;
+      font-weight: 500;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    .btn-primary:focus-visible {
+      box-shadow: 0 0 0 3px rgba(184, 74, 46, 0.4);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 10px 28px;
+      border: 1px solid var(--primary-light);
+      color: var(--primary);
+      border-radius: var(--radius-btn);
+      font-size: 15px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-outline:hover,
+    .btn-outline:focus-visible {
+      background: var(--primary-light);
+      color: #fff;
+      outline: none;
+    }
+
+    .btn-outline:focus-visible {
+      box-shadow: 0 0 0 3px rgba(42, 30, 26, 0.2);
+    }
+
+    .hero-visual {
+      position: relative;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-visual svg {
+      width: 100%;
+      max-width: 460px;
+      height: auto;
+    }
+
+    /* ---------- Main Layout: 双栏标准 (左主内容 + 右侧栏) ---------- */
+    .main-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px 64px;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: var(--gap);
+      align-items: start;
+    }
+
+    /* ---------- Content Sections ---------- */
+    .content-section {
+      margin-bottom: 48px;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
+
+    .section-intro {
+      font-size: 14px;
+      color: var(--text-tertiary);
+      margin-bottom: 20px;
+    }
+
+    /* Overview */
+    .overview-text {
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--text-secondary);
+    }
+
+    .overview-text p {
+      margin-bottom: 14px;
+    }
+
+    /* Featured Cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-3px);
+    }
+
+    .card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      background: var(--divider);
+    }
+
+    .card-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .card-type {
+      display: inline-block;
+      font-size: 12px;
+      padding: 2px 10px;
+      border-radius: var(--radius-tag);
+      background: var(--accent-light);
+      color: #fff;
+      align-self: flex-start;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.4;
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .card-meta {
+      display: flex;
+      gap: 12px;
+      font-size: 12px;
+      color: var(--text-tertiary);
+      flex-wrap: wrap;
+    }
+
+    /* Latest Updates */
+    .update-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .update-item {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 14px 18px;
+      box-shadow: var(--shadow-default);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      transition: box-shadow 0.2s;
+    }
+
+    .update-item:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    .update-info {
+      flex: 1;
+    }
+
+    .update-name {
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .update-summary {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .update-date {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* Category Grid */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .category-item {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 16px 12px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-primary);
+      box-shadow: var(--shadow-default);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .category-item:hover,
+    .category-item:focus-visible {
+      background: var(--primary-light);
+      color: #fff;
+      outline: none;
+    }
+
+    .category-item:focus-visible {
+      box-shadow: 0 0 0 3px rgba(42, 30, 26, 0.2);
+    }
+
+    /* Deep Dive */
+    .deep-dive {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 28px 28px 20px;
+      box-shadow: var(--shadow-default);
+    }
+
+    .deep-dive h3 {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 20px 0 10px;
+    }
+
+    .deep-dive h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .deep-dive p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.9;
+      margin-bottom: 12px;
+    }
+
+    .deep-dive ul {
+      list-style: disc;
+      padding-left: 20px;
+      margin-bottom: 14px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .deep-dive li {
+      margin-bottom: 6px;
+    }
+
+    /* Guide */
+    .guide-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .guide-step {
+      display: flex;
+      gap: 16px;
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 18px;
+      box-shadow: var(--shadow-default);
+    }
+
+    .step-num {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 40px;
+    }
+
+    .step-content h4 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .step-content p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .faq-item {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      padding: 14px 18px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "＋";
+      font-size: 18px;
+      color: var(--accent);
+      transition: transform 0.2s;
+    }
+
+    .faq-item[open] summary::after {
+      content: "－";
+    }
+
+    .faq-item summary:focus-visible {
+      outline: 3px solid rgba(184, 74, 46, 0.4);
+    }
+
+    .faq-answer {
+      padding: 0 18px 16px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    /* Comments */
+    .comments-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .comment-item {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 12px 16px;
+      box-shadow: var(--shadow-default);
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .comment-author {
+      font-weight: 600;
+      color: var(--primary);
+      margin-right: 8px;
+    }
+
+    .comment-meta {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      margin-left: 8px;
+    }
+
+    /* News */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .news-item {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-default);
+    }
+
+    .news-title {
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .news-date {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      margin-bottom: 6px;
+    }
+
+    .news-summary {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* Recommendations */
+    .rec-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .rec-tag {
+      padding: 8px 18px;
+      background: var(--surface);
+      border-radius: var(--radius-tag);
+      font-size: 14px;
+      color: var(--text-secondary);
+      box-shadow: var(--shadow-default);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .rec-tag:hover,
+    .rec-tag:focus-visible {
+      background: var(--primary-light);
+      color: #fff;
+      outline: none;
+    }
+
+    .rec-tag:focus-visible {
+      box-shadow: 0 0 0 3px rgba(42, 30, 26, 0.2);
+    }
+
+    /* Hot Ranking */
+    .ranking-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      counter-reset: rank;
+    }
+
+    .ranking-item {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 12px 18px;
+      box-shadow: var(--shadow-default);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      counter-increment: rank;
+    }
+
+    .ranking-item::before {
+      content: counter(rank);
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--accent);
+      width: 30px;
+      flex-shrink: 0;
+    }
+
+    .ranking-content {
+      flex: 1;
+    }
+
+    .ranking-name {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .ranking-meta {
+      font-size: 12px;
+      color: var(--text-tertiary);
+    }
+
+    /* ---------- Sidebar ---------- */
+    .sidebar {
+      position: sticky;
+      top: calc(var(--sticky-height) + 20px);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .sidebar-widget {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 20px;
+      box-shadow: var(--shadow-default);
+    }
+
+    .widget-title {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--divider);
+    }
+
+    .widget-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .widget-link {
+      font-size: 14px;
+      color: var(--text-secondary);
+      display: flex;
+      justify-content: space-between;
+      transition: color 0.2s;
+    }
+
+    .widget-link:hover,
+    .widget-link:focus-visible {
+      color: var(--accent);
+      outline: none;
+    }
+
+    .widget-link:focus-visible {
+      text-decoration: underline;
+    }
+
+    .widget-update {
+      font-size: 12px;
+      color: var(--text-tertiary);
+    }
+
+    /* ---------- Footer ---------- */
+    .site-footer {
+      background: var(--primary-dark);
+      color: #c9b8ae;
+      padding: 48px 24px 32px;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-brand {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+
+    .footer-desc {
+      font-size: 13px;
+      line-height: 1.8;
+      color: #a8958b;
+      max-width: 320px;
+    }
+
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #e0d4cc;
+      margin-bottom: 14px;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 13px;
+      color: #a8958b;
+      margin-bottom: 8px;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover,
+    .footer-col a:focus-visible {
+      color: #fff;
+      outline: none;
+    }
+
+    .footer-col a:focus-visible {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 40px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+      color: #7a6a60;
+    }
+
+    /* ---------- Back to Top ---------- */
+    .back-to-top {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-hover);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s, transform 0.2s;
+      z-index: 90;
+      font-size: 20px;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-3px);
+    }
+
+    .back-to-top:focus-visible {
+      outline: 3px solid rgba(184, 74, 46, 0.6);
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1024px) {
+      .main-container {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        text-align: center;
+      }
+
+      .hero-content h1 {
+        font-size: 38px;
+      }
+
+      .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        height: 240px;
+        order: -1;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 740px) {
+      :root {
+        --sticky-height: 96px;
+      }
+
+      .site-header {
+        gap: 12px;
+        padding: 10px 16px;
+      }
+
+      .brand-text {
+        font-size: 20px;
+      }
+
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        flex-direction: column;
+        padding: 12px 16px;
+        box-shadow: var(--shadow-hover);
+        border-radius: 0 0 var(--radius-card) var(--radius-card);
+        gap: 4px;
+        z-index: 200;
+      }
+
+      .main-nav.open {
+        display: flex;
+      }
+
+      .main-nav a {
+        padding: 10px 14px;
+        width: 100%;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .search-box input {
+        width: 100px;
+      }
+
+      .hero-content h1 {
+        font-size: 30px;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .announcement-inner {
+        flex-direction: column;
+        gap: 4px;
+        align-items: flex-start;
+      }
+
+      .announce-items {
+        gap: 8px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .back-to-top {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* ---------- Utility ---------- */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- Sticky Wrapper -->
+<div class="sticky-wrapper">
+  <!-- Announcement Bar -->
+  <div class="announcement-bar" role="region" aria-label="站点公告">
+    <div class="announcement-inner">
+      <span class="announce-brand">极乐门</span>
+      <div class="announce-items">
+        <span><span class="date">2026-11-07</span>「纸扎新娘」系列更新第4话</span>
+        <span><span class="date">2026-11-06</span>「湘西赶尸」考据长文上线</span>
+        <span><span class="date">2026-11-05</span>新增「民俗禁忌」分类12条</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <a href="/" class="brand" aria-label="极乐门首页">
+      <svg class="brand-logo" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="4" y="4" width="32" height="32" rx="6" stroke="#b84a2e" stroke-width="2.5"/>
+        <path d="M12 20 L20 10 L28 20 L20 30 Z" fill="#b84a2e" opacity="0.7"/>
+        <circle cx="20" cy="20" r="4" fill="#2a1e1a"/>
+      </svg>
+      <span class="brand-text">极乐门</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="主题导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#featured">精选推荐</a>
+      <a href="/#updates">最新更新</a>
+      <a href="/#categories">分类入口</a>
+      <a href="/#deepdive">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#community">用户评论</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#recommend">相关推荐</a>
+      <a href="/#ranking">热门榜单</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="search-box" role="search">
+        <input type="text" id="searchInput" placeholder="搜索条目、类型…" aria-label="站内搜索">
+        <button type="button" id="searchBtn" aria-label="搜索">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="打开菜单" aria-expanded="false" aria-controls="mainNav">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </header>
+</div>
+
+<!-- Hero -->
+<section class="hero" aria-label="主题首屏">
+  <div class="hero-content">
+    <h1>极乐门</h1>
+    <p class="hero-desc">
+      汇集民间怪谈、都市传说、民俗禁忌与灵异事件考据。从湘西赶尸到纸扎工艺，从地方祠庙禁忌到网络流传的深夜怪谈，提供具体案例、规则拆解与真实用户讨论。
+    </p>
+    <div class="hero-actions">
+      <a href="/#featured" class="btn-primary">浏览精选条目</a>
+      <a href="/#deepdive" class="btn-outline">阅读深度解析</a>
+    </div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <svg viewBox="0 0 460 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#b84a2e" stop-opacity="0.12"/>
+          <stop offset="100%" stop-color="#2a1e1a" stop-opacity="0.06"/>
+        </linearGradient>
+      </defs>
+      <rect x="20" y="30" width="420" height="260" rx="16" fill="url(#hg)"/>
+      <path d="M100 180 Q160 120 230 160 Q300 200 360 140" stroke="#b84a2e" stroke-width="2.5" fill="none" opacity="0.6"/>
+      <circle cx="160" cy="150" r="8" fill="#b84a2e" opacity="0.5"/>
+      <circle cx="300" cy="175" r="8" fill="#2a1e1a" opacity="0.4"/>
+      <path d="M80 220 L140 200 L200 230 L260 190 L320 210 L380 170" stroke="#2a1e1a" stroke-width="1.5" fill="none" opacity="0.2" stroke-dasharray="6 4"/>
+      <rect x="180" y="90" width="100" height="130" rx="8" stroke="#2a1e1a" stroke-width="1.5" opacity="0.15" fill="none"/>
+      <text x="230" y="160" text-anchor="middle" font-family="serif" font-size="28" fill="#2a1e1a" opacity="0.1">門</text>
+    </svg>
+  </div>
+</section>
+
+<!-- Main Container -->
+<div class="main-container">
+  <!-- Main Content -->
+  <main>
+    <!-- 1. 主题领域概览 -->
+    <section id="overview" class="content-section">
+      <h2 class="section-title">民间怪谈与民俗禁忌概览</h2>
+      <div class="overview-text">
+        <p>民间怪谈涵盖的范围远比“鬼故事”三个字要宽。以地域划分，有湘西赶尸、闽南送王船、客家围屋的镇宅习俗；以载体划分，有纸扎工艺、傩戏面具、符箓绘制；以传播形态划分，有地方祠庙的口传禁忌、网络论坛的都市传说接龙、短视频平台的“探灵”实录。各方向之间并不是孤立的，同一则故事在口述、笔记小说、短视频里会呈现完全不同的面貌。</p>
+        <p>近两年值得关注的具体动向包括：湖南怀化一带的纸扎手艺人在短视频平台拆解“纸人开脸”工序，单条播放量过百万；台湾学者在2026年10月发布了《送王船仪式中的禁忌与变通》田野报告，记录了泉州、台南两地同一仪式在时间安排上的差异；网络社区“灵异吧”每月汇总的“本月新怪谈”已连续更新到第71期，11月合辑收录了7则新条目。</p>
+        <p>对普通读者而言，进入这个领域最省力的切口是“具体案例+规则说明”，而非笼统的“灵异合集”。一条怪谈之所以流传，往往因为其中嵌入了可复述的禁忌动作——夜里不吹口哨、筷子不插饭中、纸扎用品不拿进屋。这些规则本身没有超自然验证，但它们在特定地域和仪式场景中确实约束着人的行为。理解这些约束的形成过程，比争论“有没有鬼”更有信息量。</p>
+      </div>
+    </section>
+
+    <!-- 2. 精选内容推荐 -->
+    <section id="featured" class="content-section">
+      <h2 class="section-title">精选怪谈与民俗条目</h2>
+      <div class="card-grid">
+        <article class="card">
+          <img class="card-img" src="https://picsum.photos/seed/zhizha01/400/300" alt="纸扎新娘系列中的纸扎人偶与婚嫁道具" width="400" height="300" loading="lazy">
+          <div class="card-body">
+            <span class="card-type">连载怪谈</span>
+            <h3 class="card-title">纸扎新娘·第4话「开脸」</h3>
+            <p class="card-desc">讲述纸扎铺学徒在给纸人画眉眼时发现颜料盘里多出一根不属于任何人的长发。本话重点在“开脸”工序的规矩：画眼必须从右到左，最后一笔不能回头改。</p>
+            <div class="card-meta">
+              <span>更新 2026-11-07</span>
+              <span>热度 8.7万</span>
+              <span>评分 9.1</span>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <img class="card-img" src="https://picsum.photos/seed/xiangxi02/400/300" alt="湘西赶尸题材的田野笔记封面与山路照片" width="400" height="300" loading="lazy">
+          <div class="card-body">
+            <span class="card-type">田野考据</span>
+            <h3 class="card-title">湘西赶尸路线再考：沅陵到泸溪段</h3>
+            <p class="card-desc">依据地方志与三位老赶尸匠后人的口述，重新梳理了沅江沿岸的停灵点分布。文中列出七个有明确地名记载的歇脚处，其中三处至今仍有村民在特定日子烧纸。</p>
+            <div class="card-meta">
+              <span>更新 2026-11-06</span>
+              <span>热度 6.2万</span>
+              <span>评分 8.8</span>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <img class="card-img" src="https://picsum.photos/seed/songwang03/400/300" alt="送王船仪式中的木质王船与纸制随行物品" width="400" height="300" loading="lazy">
+          <div class="card-body">
+            <span class="card-type">仪式记录</span>
+            <h3 class="card-title">送王船：泉州与台南的十三处差异</h3>
+            <p class="card-desc">同一仪式在两地的执行流程有十三处可对照的差异，包括王船尺寸、巡境路线、纸扎随行品的种类。台南偏重“送出海”，泉州更强调“游境”阶段的社区参与。</p>
+            <div class="card-meta">
+              <span>更新 2026-11-03</span>
+              <span>热度 4.9万</span>
+              <span>评分 9.3</span>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <img class="card-img" src="https://picsum.photos/seed/mianju04/400/300" alt="傩戏面具木雕工艺展示与彩绘细节" width="400" height="300" loading="lazy">
+          <div class="card-body">
+            <span class="card-type">工艺图解</span>
+            <h3 class="card-title">傩面具的十二道工序与开光禁忌</h3>
+            <p class="card-desc">从选木、粗坯到打磨、上彩，十二道工序逐条配图说明。开光环节的禁忌最具体：面具内腔不能留木屑，刻刀在开光后不可再用于其他物件。</p>
+            <div class="card-meta">
+              <span>更新 2026-10-28</span>
+              <span>热度 3.5万</span>
+              <span>评分 8.6</span>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <img class="card-img" src="https://picsum.photos/seed/yeban05/400/300" alt="夜半怪谈音频节目的录制现场与麦克风" width="400" height="300" loading="lazy">
+          <div class="card-body">
+            <span class="card-type">音频栏目</span>
+            <h3 class="card-title">夜半怪谈电台·第112期「楼梯间的第14级」</h3>
+            <p class="card-desc">听众投稿的居民楼怪谈，核心细节是某栋1990年代建成的宿舍楼，楼梯间台阶数在夜间会从13级变成14级。主播实地探访后给出了建筑结构上的解释，但保留了未解部分。</p>
+            <div class="card-meta">
+              <span>更新 2026-11-05</span>
+              <span>热度 5.1万</span>
+              <span>评分 8.4</span>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <img class="card-img" src="https://picsum.photos/seed/cixiang06/400/300" alt="地方祠庙中的香炉与签筒特写" width="400" height="300" loading="lazy">
+          <div class="card-body">
+            <span class="card-type">禁忌清单</span>
+            <h3 class="card-title">祠庙求签的七个常见错误动作</h3>
+            <p class="card-desc">求签时先报姓名还是先掷筊、签筒怎么摇、抽到签后往哪个方向走，各地规矩不同。文中按闽南、潮汕、客家三套体系分别列出，并说明哪些动作在跨地区时最容易出错。</p>
+            <div class="card-meta">
+              <span>更新 2026-11-01</span>
+              <span>热度 2.8万</span>
+              <span>评分 8.9</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. 最新更新 -->
+    <section id="updates" class="content-section">
+      <h2 class="section-title">最新收录与更新动态</h2>
+      <div class="update-list">
+        <div class="update-item">
+          <div class="update-info">
+            <div class="update-name">纸扎新娘·第4话「开脸」</div>
+            <div class="update-summary">纸扎铺学徒发现颜料盘里出现不明长发，本话推进主线并补充了“开脸”工序的完整规矩。</div>
+          </div>
+          <span class="update-date">11月7日</span>
+        </div>
+        <div class="update-item">
+          <div class="update-info">
+            <div class="update-name">湘西赶尸路线再考：沅陵到泸溪段</div>
+            <div class="update-summary">新增七个停灵点的地名核对，其中三处附有2026年10月的实地照片与村民口述记录。</div>
+          </div>
+          <span class="update-date">11月6日</span>
+        </div>
+        <div class="update-item">
+          <div class="update-info">
+            <div class="update-name">夜半怪谈电台·第112期「楼梯间的第14级」</div>
+            <div class="update-summary">主播实地探访宿舍楼并测量台阶，给出了三种建筑学解释，结尾保留了两个未解细节。</div>
+          </div>
+          <span class="update-date">11月5日</span>
+        </div>
+        <div class="update-item">
+          <div class="update-info">
+            <div class="update-name">送王船：泉州与台南的十三处差异</div>
+            <div class="update-summary">依据2026年10月发布的田野报告，逐项对比两地仪式流程并附差异对照表。</div>
+          </div>
+          <span class="update-date">11月3日</span>
+        </div>
+        <div class="update-item">
+          <div class="update-info">
+            <div class="update-name">祠庙求签的七个常见错误动作</div>
+            <div class="update-summary">按闽南、潮汕、客家三套体系整理求签流程，重点标注跨地区时最容易出错的七个动作。</div>
+          </div>
+          <span class="update-date">11月1日</span>
+        </div>
+        <div class="update-item">
+          <div class="update-info">
+            <div class="update-name">傩面具的十二道工序与开光禁忌</div>
+            <div class="update-summary">新增工序分解图与开光环节的三条禁忌说明，补充了刻刀使用前后的规矩。</div>
+          </div>
+          <span class="update-date">10月28日</span>
+        </div>
+        <div class="update-item">
+          <div class="update-info">
+            <div class="update-name">灵异吧10月合辑：七则新怪谈</div>
+            <div class="update-summary">汇总了当月讨论量最高的七则帖子，包括“电梯里的第5人”和“凌晨三点的敲门声”两个系列。</div>
+          </div>
+          <span class="update-date">10月31日</span>
+        </div>
+        <div class="update-item">
+          <div class="update-info">
+            <div class="update-name">闽南宅院镇宅符的张贴位置图解</div>
+            <div class="update-summary">依据三座清代宅院的实地调查，标注了门楣、照壁、灶台三处最常见张贴点及尺寸比例。</div>
+          </div>
+          <span class="update-date">10月26日</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 分类入口 -->
+    <section id="categories" class="content-section">
+      <h2 class="section-title">按类型浏览</h2>
+      <div class="category-grid">
+        <a href="/#featured" class="category-item">纸扎工艺</a>
+        <a href="/#featured" class="category-item">赶尸传说</a>
+        <a href="/#featured" class="category-item">送王船</a>
+        <a href="/#featured" class="category-item">傩戏面具</a>
+        <a href="/#featured" class="category-item">祠庙禁忌</a>
+        <a href="/#featured" class="category-item">都市怪谈</a>
+        <a href="/#featured" class="category-item">镇宅符箓</a>
+        <a href="/#featured" class="category-item">深夜电台</a>
+      </div>
+    </section>
+
+    <!-- 5. 深度解析正文 -->
+    <section id="deepdive" class="content-section">
+      <h2 class="section-title">深度解析：怪谈可信度的拆解框架</h2>
+      <div class="deep-dive">
+        <h3>一、来源层级决定可核对的上限</h3>
+        <p>一则怪谈的可信度不取决于讲述者多笃定，而取决于它留下了哪些可核对的痕迹。以2026年10月在灵异吧流传的“电梯第5人”为例，原帖包含三个可核对项：事发小区名称（杭州拱墅区某1998年建成小区）、电梯品牌（日立，2005年安装）、物业报修记录（2026年9月有两次困人记录）。跟帖中有人声称“同一小区也遇到过”，但未提供具体楼栋和时间，这类补充就属于不可核对层。</p>
+        <p>把来源分成四层来读，判断会稳定很多：第一层是当事人第一人称叙述且带具体时间地点；第二层是转述他人经历，但转述者能提供可查证的中间人；第三层是“听说”“朋友的朋友”式传播，无中间人；第四层是明显的小说化加工，有完整的起承转合和伏笔。前三层都可能包含真实信息，但只有第一层和第二层值得投入时间做交叉核对。</p>
+        <h3>二、细节越多，反而越要检查是否有“事后补充”</h3>
+        <p>一个常见的误判是“细节丰富所以真实”。纸扎新娘系列第4话在更新后两天内，评论区出现了三条“我奶奶也讲过类似的开脸规矩”的回复，其中两条提到了具体地名（福建莆田、广东潮州），一条只写“我们那边”。前者可以进一步去查地方民俗记录，后者无法推进。</p>
+        <p>更可靠的做法是看细节出现的时间顺序。真正来自记忆的细节往往在第一次讲述时就出现，且带一点模糊——比如“大概是九几年”“门牌号记不清了，是单数”。反过来，如果细节是在被质疑之后才逐条补上的，且每条都精确到可以单独成段，就需要警惕。2026年9月“纸人半夜敲门”事件中，原帖第一版只有一句话，第二版增加了时间、地点、人物，第三版连对方穿的衣服颜色都写出来了。这种逐版丰富的模式，与口述记忆的运作方式不符。</p>
+        <h3>三、同一事件在不同平台的版本差异，本身就是信息</h3>
+        <p>拿“送王船”来说，短视频平台上的内容集中在焚烧王船的壮观场面，配文多用“震撼”“神秘”等词；学术平台上的田野报告则花大量篇幅记录仪式前的社区协商、经费分摊、禁忌告知。两个版本并不矛盾，它们各自截取了仪式的不同段落。读者如果只看短视频，会以为送王船的核心是“烧”，而实际上泉州地区的重点在“游境”——王船在社区巡游的两天里，沿途住户要设香案、放鞭炮，这个环节的参与度直接决定仪式是否被认为“办得成”。</p>
+        <p>跨平台对比时，可以拉一张简单的三列对照表：左边写短视频版的核心情节，中间写文字论坛版的核心情节，右边写学术记录版的核心情节。三列中重合的部分通常是仪式的硬核框架，差异部分则分别对应不同平台的传播偏好。这个方法在判断“某地某禁忌是否真实存在”时特别管用——如果三个版本都提到了同一条禁忌动作，那它大概率在当地确有约束力。</p>
+        <h3>四、区分“仪式禁忌”与“网络编造”的两条硬指标</h3>
+        <p>仪式禁忌通常有明确的执行主体和违反后果，网络编造则往往只描述现象、不指明谁来执行。举一个具体的对比：闽南祠庙求签的禁忌中有一条“抽到签后不能直接跨过门槛”，这条禁忌的执行者是庙祝，违反后的处理方式是重新掷筊，有明确的操作链条。而网络上流传的“半夜不能对着镜子梳头”，执行者是谁、违反了会怎样、谁来确认后果，全部缺失。前者可以进入民俗记录，后者只能归入都市传说。</p>
+        <p>第二条硬指标是时间跨度的可追溯性。纸扎工艺中的“开脸”规矩，至少可以追溯到1980年代莆田一带纸扎铺的师徒传承记录，2026年的短视频内容只是把它重新呈现。而“电梯第5人”这类故事，最早的版本出现在2026年9月，此前没有任何地方志、笔记或口述史记录，它的传播时间线非常短。短时间线本身不说明真假，但说明它还没有经过足够多次的社区校验。</p>
+      </div>
+    </section>
+
+    <!-- 6. 体验指南 -->
+    <section id="guide" class="content-section">
+      <h2 class="section-title">内容消费顺序与判断依据</h2>
+      <div class="guide-steps">
+        <div class="guide-step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h4>先读有地名和日期的条目</h4>
+            <p>“湘西赶尸路线再考”这类带具体地名（沅陵、泸溪）和日期（2026年10月实地记录）的内容，比笼统的“民间禁忌大全”更容易做交叉验证。地名和时间是核对成本最低的两个抓手。</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h4>把“仪式记录”和“怪谈连载”分开看</h4>
+            <p>送王船、傩面具开光属于仪式记录，核心看流程和参与者的行为约束；纸扎新娘、夜半怪谈电台属于连载怪谈，核心看叙事技巧和氛围营造。两类内容的评判标准不同，混在一起读容易把故事当事实。</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h4>比较同一题材的两地版本</h4>
+            <p>送王船在泉州和台南的十三处差异，是近期最值得花时间对照的条目。两地版本在纸扎随行品的种类上差异最明显：泉州版本通常包含纸制生活用具（锅碗、衣箱），台南版本则偏重纸制神像和兵将。差异本身能说明仪式在不同社会环境中的功能侧重。</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h4>对“探灵实录”保持最低限度的核对</h4>
+            <p>短视频平台的探灵内容，先看发布者是否标注了具体地点和可回访的日期。有标注的，可以对照地图和当地新闻做一次简单核实；没有标注的，当作叙事作品消费即可，不必投入时间分析“真假”。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section id="faq" class="content-section">
+      <h2 class="section-title">常见问答</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>纸扎新娘系列里的“开脸”规矩，现实中真有纸扎铺遵守吗？</summary>
+          <div class="faq-answer">莆田、潮州一带的老纸扎铺至今保留类似工序约束，核心动作是从右眼画到左眼、最后一笔不回改。2026年11月莆田涵江区一家三代做纸扎的铺子，师傅在视频里演示了完整开脸流程，并说明“画错只能整张脸重糊，不能补”。</div>
+        </details>
+        <details class="faq-item">
+          <summary>湘西赶尸的路线记载，哪些地名是可以查到的？</summary>
+          <div class="faq-answer">沅陵县的官庄镇、泸溪县的浦市镇、辰溪县的孝坪镇，三处都有地方志记载的停灵点或义庄旧址。2026年10月的田野记录中，官庄镇一处停灵点的石阶和门框仍保留原结构，浦市镇的原址已改为民居，但屋主保留了旧门牌。</div>
+        </details>
+        <details class="faq-item">
+          <summary>送王船在泉州和台南，普通人能参与的是哪几天？</summary>
+          <div class="faq-answer">泉州地区的“游境”环节通常持续两天，沿途住户可设香案、参与巡游队伍；台南地区的“送出海”环节对外开放程度更高，王船出港时可在岸边观看，但登船和焚烧环节仅限仪式人员。2026年10月的泉州场次中，巡游路线经过的三个社区均贴出了参与须知。</div>
+        </details>
+        <details class="faq-item">
+          <summary>傩面具开光后，刻刀真的不能再用吗？</summary>
+          <div class="faq-answer">这条禁忌在江西南丰、贵州安顺两地的傩班中都有记录，具体执行方式是：开光仪式中使用的刻刀，仪式结束后单独存放，不再用于雕刻其他面具。2026年10月安顺周官村傩班的记录显示，刻刀在开光后会被收进专门的木盒，与面具分开保存。</div>
+        </details>
+        <details class="faq-item">
+          <summary>“电梯第5人”的故事，物业记录里能找到对应事件吗？</summary>
+          <div class="faq-answer">原帖提到的小区在2026年9月确实有两次电梯困人报修记录，时间分别是9月12日和9月27日，报修内容为“门机故障”。但两次记录中均未提及超载或额外乘员，物业值班记录也只写“维修正常”。原帖中“第5人”的细节，在可查的物业记录里没有对应项。</div>
+        </details>
+        <details class="faq-item">
+          <summary>祠庙求签，闽南和客家规矩最大的不同在哪一步？</summary>
+          <div class="faq-answer">最大的不同在抽签后的“确认”环节。闽南体系通常要求连续三次掷出圣筊才算数，客家体系则常见一次圣筊后直接取签诗。2026年10月潮州一场庙会中，庙祝对两种规矩都做了说明，并指出跨地区参拜时最容易在这一步产生误会。</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8. 用户评论 -->
+    <section id="community" class="content-section">
+      <h2 class="section-title">用户评论</h2>
+      <div class="comments-list">
+        <div class="comment-item"><span class="comment-author">夜行灯</span>纸扎新娘第4话那个“从右往左画眼”的规矩，我问了家里做纸扎的亲戚，他说确实是这样，画反了要重来。<span class="comment-meta">11月7日</span></div>
+        <div class="comment-item"><span class="comment-author">沅水边的猫</span>赶尸路线那篇里提到的官庄镇停灵点，我去年路过看过，石阶还在，门框上好像有刻字但看不清了。<span class="comment-meta">11月6日</span></div>
+        <div class="comment-item"><span class="comment-author">南台阿伯</span>送王船泉州和台南的对比表做得细，不过台南那边纸扎神像的尺寸其实还有分大中小三档，文章没提。<span class="comment-meta">11月5日</span></div>
+        <div class="comment-item"><span class="comment-author">傩面阿青</span>傩面具开光后刻刀不用，我们安顺这边确实这样，但年轻人现在很多不讲究了。<span class="comment-meta">11月4日</span></div>
+        <div class="comment-item"><span class="comment-author">深夜刷帖</span>电梯第5人的物业记录对不上，原帖作者后来也没再回复，感觉就是编的。<span class="comment-meta">11月5日</span></div>
+        <div class="comment-item"><span class="comment-author">求签必掷筊</span>闽南三次圣筊的规矩我从小用到大，去客家朋友那边庙里一次就取签，当时还愣了一下。<span class="comment-meta">11月2日</span></div>
+        <div class="comment-item"><span class="comment-author">纸活铺学徒</span>开脸画错重糊是真的，我师父说糊脸用的浆糊稠度跟糊身体不一样。<span class="comment-meta">11月7日</span></div>
+        <div class="comment-item"><span class="comment-author">海风咸</span>送王船游境那两天沿街摆香案，小时候觉得热闹，长大才知道那是“接船”的意思。<span class="comment-meta">11月3日</span></div>
+        <div class="comment-item"><span class="comment-author">路过的夜猫</span>夜半怪谈电台112期听完睡不着，第二天去查了那个小区的建筑图纸，楼梯确实有改建痕迹。<span class="comment-meta">11月6日</span></div>
+        <div class="comment-item"><span class="comment-author">潮州小陈</span>求签那篇里说的跨地区容易错的动作，我中过一个——抽完签直接跨门槛，被庙祝喊回来重新掷筊。<span class="comment-meta">11月1日</span></div>
+        <div class="comment-item"><span class="comment-author">山径拾遗</span>镇宅符张贴位置那篇，照壁贴符的尺寸比例写得太细了，一般人家根本不会量那么准，但挺有意思。<span class="comment-meta">10月30日</span></div>
+        <div class="comment-item"><span class="comment-author">不署名</span>“纸人半夜敲门”那个逐版丰富的分析说得在理，我翻回去看了第一版，真的就一句话。<span class="comment-meta">10月29日</span></div>
+        <div class="comment-item"><span class="comment-author">泸溪老表</span>浦市镇那个停灵点原址我去看过，现在是卖米粉的，老板说老门牌收在里屋了。<span class="comment-meta">11月6日</span></div>
+        <div class="comment-item"><span class="comment-author">听风的人</span>评论里好多人都在考据，其实有些故事听听就好，不用每一条都对照地方志。<span class="comment-meta">11月5日</span></div>
+      </div>
+    </section>
+
+    <!-- 9. 相关资讯 -->
+    <section id="news" class="content-section">
+      <h2 class="section-title">相关资讯</h2>
+      <div class="news-list">
+        <div class="news-item">
+          <div class="news-title">泉州送王船巡境路线2026年调整：新增两个社区停靠点</div>
+          <div class="news-date">2026年11月4日</div>
+          <div class="news-summary">今年巡境路线比去年延长约1.2公里，新增蟳埔社区和法石社区两个停靠点。组织方表示调整原因是老路线经过的临海路段正在施工，预计2027年恢复。</div>
+        </div>
+        <div class="news-item">
+          <div class="news-title">莆田纸扎艺人上线“开脸”全流程视频，单条播放量破86万</div>
+          <div class="news-date">2026年11月3日</div>
+          <div class="news-summary">涵江区纸扎铺第三代传人11月2日发布的开脸教学视频，完整展示了从打底到勾线的11个步骤，其中“右眼起笔”的规矩引发评论区讨论，已收到超过2400条提问。</div>
+        </div>
+        <div class="news-item">
+          <div class="news-title">湘西自治州非遗中心新增“赶尸习俗”口述史档案12份</div>
+          <div class="news-date">2026年10月30日</div>
+          <div class="news-summary">档案涵盖沅陵、泸溪、辰溪三县，受访者平均年龄78岁，其中3人曾亲眼见过赶尸队伍歇脚。档案数字化版本预计2027年一季度向公众开放。</div>
+        </div>
+        <div class="news-item">
+          <div class="news-title">安顺周官村傩班收徒仪式举行，最年轻学徒19岁</div>
+          <div class="news-date">2026年10月27日</div>
+          <div class="news-summary">本次收徒3人，分别学习面具雕刻、傩舞和仪式主持。班主在仪式后表示，开光刻刀的传承规则会写入新一版师承记录，预计11月中旬整理完成。</div>
+        </div>
+        <div class="news-item">
+          <div class="news-title">灵异吧10月合辑收录七则新怪谈，“电梯第5人”讨论量居首</div>
+          <div class="news-date">2026年10月31日</div>
+          <div class="news-summary">合辑帖共收到8700余条回复，“电梯第5人”相关讨论占38%。吧务在合辑末尾标注：三则帖子的关键细节未能提供可核对信息，建议读者自行判断。</div>
+        </div>
+        <div class="news-item">
+          <div class="news-title">潮州祠庙求签规矩调查发布：闽南与客家体系差异集中在确认环节</div>
+          <div class="news-date">2026年10月26日</div>
+          <div class="news-summary">调查覆盖潮州、汕头两地17座祠庙，回收有效问卷412份。数据显示73%的闽南体系祠庙要求三次圣筊，客家体系祠庙中该比例为41%，其余多采用一次确认。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. 相关推荐 -->
+    <section id="recommend" class="content-section">
+      <h2 class="section-title">相关推荐</h2>
+      <div class="rec-tags">
+        <a href="/#featured" class="rec-tag">纸扎开脸工序图解</a>
+        <a href="/#featured" class="rec-tag">沅陵官庄镇停灵点</a>
+        <a href="/#featured" class="rec-tag">泉州送王船游境须知</a>
+        <a href="/#featured" class="rec-tag">傩面具开光刻刀规矩</a>
+        <a href="/#featured" class="rec-tag">闽南求签三次圣筊</a>
+        <a href="/#featured" class="rec-tag">电梯第5人物业记录</a>
+        <a href="/#featured" class="rec-tag">客家一次取签流程</a>
+      </div>
+    </section>
+
+    <!-- 11. 补充板块：热门榜单 -->
+    <section id="ranking" class="content-section">
+      <h2 class="section-title">本周热门条目</h2>
+      <div class="ranking-list">
+        <div class="ranking-item">
+          <div class="ranking-content">
+            <div class="ranking-name">纸扎新娘·第4话「开脸」</div>
+            <div class="ranking-meta">阅读 8.7万 · 讨论 340条</div>
+          </div>
+        </div>
+        <div class="ranking-item">
+          <div class="ranking-content">
+            <div class="ranking-name">湘西赶尸路线再考：沅陵到泸溪段</div>
+            <div class="ranking-meta">阅读 6.2万 · 讨论 218条</div>
+          </div>
+        </div>
+        <div class="ranking-item">
+          <div class="ranking-content">
+            <div class="ranking-name">夜半怪谈电台·第112期</div>
+            <div class="ranking-meta">播放 5.1万 · 评论 156条</div>
+          </div>
+        </div>
+        <div class="ranking-item">
+          <div class="ranking-content">
+            <div class="ranking-name">送王船：泉州与台南的十三处差异</div>
+            <div class="ranking-meta">阅读 4.9万 · 收藏 892次</div>
+          </div>
+        </div>
+        <div class="ranking-item">
+          <div class="ranking-content">
+            <div class="ranking-name">傩面具的十二道工序与开光禁忌</div>
+            <div class="ranking-meta">阅读 3.5万 · 收藏 671次</div>
+          </div>
+        </div>
+        <div class="ranking-item">
+          <div class="ranking-content">
+            <div class="ranking-name">祠庙求签的七个常见错误动作</div>
+            <div class="ranking-meta">阅读 2.8万 · 讨论 103条</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" aria-label="辅助信息">
+    <div class="sidebar-widget">
+      <h3 class="widget-title">近期更新</h3>
+      <div class="widget-list">
+        <a href="/#featured" class="widget-link">纸扎新娘·第4话<span class="widget-update">11月7日</span></a>
+        <a href="/#featured" class="widget-link">湘西赶尸路线再考<span class="widget-update">11月6日</span></a>
+        <a href="/#featured" class="widget-link">夜半怪谈电台112期<span class="widget-update">11月5日</span></a>
+        <a href="/#featured" class="widget-link">送王船差异对照<span class="widget-update">11月3日</span></a>
+        <a href="/#featured" class="widget-link">祠庙求签错误动作<span class="widget-update">11月1日</span></a>
+        <a href="/#featured" class="widget-link">傩面具工序图解<span class="widget-update">10月28日</span></a>
+      </div>
+    </div>
+    <div class="sidebar-widget">
+      <h3 class="widget-title">热门标签</h3>
+      <div class="rec-tags">
+        <a href="/#featured" class="rec-tag">纸扎</a>
+        <a href="/#featured" class="rec-tag">赶尸</a>
+        <a href="/#featured" class="rec-tag">送王船</a>
+        <a href="/#featured" class="rec-tag">傩面具</a>
+        <a href="/#featured" class="rec-tag">求签</a>
+        <a href="/#featured" class="rec-tag">镇宅符</a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">极乐门</div>
+      <p class="footer-desc">
+        内容覆盖2024至2026年的民间怪谈与民俗记录，条目类型包括田野考据、仪式记录、工艺图解、连载怪谈与深夜电台。每周三、周五更新长文，每日更新短条目与讨论合辑。
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>内容分类</h4>
+      <a href="/#featured">纸扎工艺</a>
+      <a href="/#featured">赶尸传说</a>
+      <a href="/#featured">送王船</a>
+      <a href="/#featured">傩戏面具</a>
+      <a href="/#featured">祠庙禁忌</a>
+    </div>
+    <div class="footer-col">
+      <h4>互动栏目</h4>
+      <a href="/#community">用户评论</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#recommend">相关推荐</a>
+      <a href="/#ranking">热门榜单</a>
+    </div>
+    <div class="footer-col">
+      <h4>关于</h4>
+      <a href="/#overview">领域概览</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#guide">体验指南</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>页面内容为示例条目，事实性信息以标注日期为准。</span>
+    <span>© 2026 极乐门 · 内容聚合示例</span>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "极乐门",
+  "description": "汇集民间怪谈、都市传说、民俗禁忌与灵异事件考据，提供具体案例、规则拆解与真实用户讨论。",
+  "inLanguage": "zh-CN",
+  "url": ""
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "纸扎新娘系列里的“开脸”规矩，现实中真有纸扎铺遵守吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "莆田、潮州一带的老纸扎铺至今保留类似工序约束，核心动作是从右眼画到左眼、最后一笔不回改。2026年11月莆田涵江区一家三代做纸扎的铺子，师傅在视频里演示了完整开脸流程，并说明“画错只能整张脸重糊，不能补”。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "湘西赶尸的路线记载，哪些地名是可以查到的？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "沅陵县的官庄镇、泸溪县的浦市镇、辰溪县的孝坪镇，三处都有地方志记载的停灵点或义庄旧址。2026年10月的田野记录中，官庄镇一处停灵点的石阶和门框仍保留原结构，浦市镇的原址已改为民居，但屋主保留了旧门牌。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "送王船在泉州和台南，普通人能参与的是哪几天？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "泉州地区的“游境”环节通常持续两天，沿途住户可设香案、参与巡游队伍；台南地区的“送出海”环节对外开放程度更高，王船出港时可在岸边观看，但登船和焚烧环节仅限仪式人员。2026年10月的泉州场次中，巡游路线经过的三个社区均贴出了参与须知。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "傩面具开光后，刻刀真的不能再用吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "这条禁忌在江西南丰、贵州安顺两地的傩班中都有记录，具体执行方式是：开光仪式中使用的刻刀，仪式结束后单独存放，不再用于雕刻其他面具。2026年10月安顺周官村傩班的记录显示，刻刀在开光后会被收进专门的木盒，与面具分开保存。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "“电梯第5人”的故事，物业记录里能找到对应事件吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "原帖提到的小区在2026年9月确实有两次电梯困人报修记录，时间分别是9月12日和9月27日，报修内容为“门机故障”。但两次记录中均未提及超载或额外乘员，物业值班记录也只写“维修正常”。原帖中“第5人”的细节，在可查的物业记录里没有对应项。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "祠庙求签，闽南和客家规矩最大的不同在哪一步？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "最大的不同在抽签后的“确认”环节。闽南体系通常要求连续三次掷出圣筊才算数，客家体系则常见一次圣筊后直接取签诗。2026年10月潮州一场庙会中，庙祝对两种规矩都做了说明，并指出跨地区参拜时最容易在这一步产生误会。"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Inline Script -->
+<script>
+  (function() {
+    // Mobile menu toggle
+    var menuToggle = document.getElementById('menuToggle');
+    var mainNav = document.getElementById('mainNav');
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', function() {
+        var isOpen = mainNav.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', isOpen);
+      });
+      // Close menu on nav link click (mobile)
+      mainNav.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A' && window.innerWidth <= 740) {
+          mainNav.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+      // Close menu on Escape
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mainNav.classList.contains('open')) {
+          mainNav.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.focus();
+        }
+      });
+    }
+
+    // Back to top
+    var backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > window.innerHeight) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      });
+      backToTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // Search functionality (simple filter on visible text)
+    var searchInput = document.getElementById('searchInput');
+    var searchBtn = document.getElementById('searchBtn');
+    if (searchInput && searchBtn) {
+      function performSearch() {
+        var query = searchInput.value.trim().toLowerCase();
+        if (!query) {
+          // Reset: show all sections/cards
+          document.querySelectorAll('.content-section, .card, .update-item, .news-item, .comment-item, .ranking-item').forEach(function(el) {
+            el.style.display = '';
+          });
+          return;
+        }
+        // Hide all sections first, then show matching items
+        document.querySelectorAll('.content-section').forEach(function(section) {
+          section.style.display = 'none';
+        });
+        // Search within specific item types
+        var found = false;
+        document.querySelectorAll('.card, .update-item, .news-item, .comment-item, .ranking-item, .faq-item').forEach(function(el) {
+          var text = el.textContent.toLowerCase();
+          if (text.indexOf(query) !== -1) {
+            el.style.display = '';
+            // Show parent section
+            var parentSection = el.closest('.content-section');
+            if (parentSection) {
+              parentSection.style.display = '';
+            }
+            found = true;
+          } else {
+            el.style.display = 'none';
+          }
+        });
+        if (!found) {
+          // Show a no-results message (temporary)
+          var msg = document.getElementById('searchNoResult');
+          if (!msg) {
+            msg = document.createElement('div');
+            msg.id = 'searchNoResult';
+            msg.style.cssText = 'padding:24px;text-align:center;color:var(--text-tertiary);font-size:15px;';
+            msg.textContent = '没有找到匹配的条目，请换个词试试。';
+            var main = document.querySelector('main');
+            if (main) main.prepend(msg);
+          }
+          msg.style.display = '';
+        } else {
+          var msg = document.getElementById('searchNoResult');
+          if (msg) msg.style.display = 'none';
+        }
+      }
+      searchBtn.addEventListener('click', performSearch);
+      searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          performSearch();
+        }
+      });
+    }
+
+    // Smooth scroll offset is handled by CSS scroll-padding-top
+  })();
+</script>
+
+</body>
+            </html>
